@@ -33,4 +33,5 @@ p {
 
 footer {
     margin-top: 100%;
+    position: fixed;
 }
