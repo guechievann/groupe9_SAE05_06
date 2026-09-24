@@ -10,4 +10,4 @@
 <h2>Présentation du projet</h2>
 le projet consiste à présenter l'entreprise Scaleway sur un plan large et puis avec des précision comme :<br>
 - un point de vue économique <br>
-- les services qu'il propose
+- les services qu'elle propose
