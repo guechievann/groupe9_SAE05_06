@@ -120,8 +120,8 @@ footer {
     padding: 30px;
 
     text-align: center;
-
-    background-color: rgb(123, 33, 155);
+    margin-top: auto;
+    background-color: #4b1aab;
     color: rgb(228, 218, 237);
 }
 
