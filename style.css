@@ -112,6 +112,13 @@ p {
 
     margin: 3px auto;
 }
+#p1 {
+    margin: 0 auto;
+    max-width: 650px;
+    padding: 20px;
+    line-height: 1.8;
+}
+
 
 
 /* ==================== FOOTER ==================== */
