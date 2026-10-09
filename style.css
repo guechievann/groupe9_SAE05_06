@@ -12,54 +12,109 @@ html, body {
 body {
     background-color: rgb(228, 218, 237);
     font-family: system-ui, -apple-system, BlinkMacSystemFont;
-    padding-top: 52px;
 }
-
 
 /* ==================== MENU ==================== */
 
-nav {
-    display: flex;
-    align-items: center;
+:root {
+  --ink: #1b1d3a;
+  --violet: #4c1aa8;
+  --violet-dark: #3a1383;
+  --violet-soft: #eeebfb;
+  --surface: #ffffff;
+  --line: #ddd8ee;
 
-    position: fixed;
-    top: 0;
-    left: 0;
+  --font-title: "ADLaM Display", "Trebuchet MS", "Segoe UI", Arial, sans-serif;
 
-    width: 100%;
-    padding: 6px 10px;
-
-    background-color: #4b1aab;
-    
-    z-index: 1000;
+  --radius-pill: 999px;
 }
 
-/* Tous les liens du menu */
-
-nav a {
-    color: rgb(228, 218, 237);
-    text-decoration: none;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #eceaf8;
+    --violet: #a58bf0;
+    --violet-dark: #c9b9f7;
+    --violet-soft: #2a2450;
+    --surface: #1c1b38;
+    --line: #38355f;
+  }
 }
 
-
-/* Liens Accueil / Entreprise / Services / Infrastructures */
-
-.menu {
-    display: flex;
-    gap: clamp(15px, 4vw, 50px);
-
-    margin-left: auto;
-    margin-right: auto;
+.container {
+  width: min(1120px, 100% - 3rem);
+  margin-inline: auto;
 }
 
+/* ---------- En-tête et menu ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
 
-/* Effet quand la souris passe dessus */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 4.25rem;
+  flex-wrap: wrap;
+}
 
-nav a:hover {
-    text-decoration: underline;
-    text-decoration-color: rgb(228, 218, 237);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 6px;
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--violet);
+}
+
+.brand img {
+  display: block;
+  width: 34px;
+  height: 34px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.55rem 1.05rem;
+  border-radius: var(--radius-pill);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.main-nav a:hover {
+  background: var(--violet-soft);
+  color: var(--violet-dark);
+}
+
+.main-nav a[aria-current="page"] {
+  background: var(--violet);
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .main-nav a[aria-current="page"] {
+    color: #14132a;
+  }
 }
 
 
@@ -148,10 +203,6 @@ footer {
 
 @media (max-width: 768px) {
 
-    .menu {
-        gap: 15px;
-    }
-
     .accueil {
         background-size: cover;
         min-height: 450px;
@@ -163,24 +214,6 @@ footer {
 /* ==================== TÉLÉPHONE ==================== */
 
 @media (max-width: 600px) {
-
-    nav {
-        flex-wrap: wrap;
-    }
-
-    .menu {
-        width: 100%;
-
-        justify-content: center;
-
-        margin-top: 8px;
-
-        gap: 15px;
-    }
-
-    body {
-        padding-top: 90px;
-    }
 
     .accueil {
         min-height: 400px;
