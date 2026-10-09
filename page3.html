@@ -1,32 +1,490 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infrastructures</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infrastructures de Scaleway – Swaycloud</title>
+  <meta name="description" content="Où se trouvent les datacenters de Scaleway, comment ils sont refroidis, quelle puissance de calcul ils réservent à l'IA et ce qu'il faut nuancer sur leur empreinte.">
+  <meta name="author" content="Mathéo GUIPET">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ADLaM+Display&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="infrastructures.css">
 </head>
 <body>
-    <header class="site-header">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <img src="images/logo.png" width="34" height="34" alt="">
+        <img src="img/logo.png" width="34" height="34" alt="">
         <span>Swaycloud</span>
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Menu principal">
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="page1.html">Entreprise</a></li>
-          <li><a href="page2.html">Services</a></li>
-        <li><a href="page3.html" class="actif"><b>Infrastructures</b></a></li>
+          <li><a href="entreprise.html">Entreprise</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="infrastructures.html" class="actif"><b>Infrastructures</b></a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-    
-    <footer> Auteur : Mathéo Guipet </footer> 
-    
+  <main id="contenu">
+
+    <!-- ===== Accroche : l'essentiel d'abord (pyramide inversée) ===== -->
+    <section class="hero" aria-labelledby="titre-page">
+      <div class="container hero-grid">
+        <div>
+          <h1 id="titre-page">Infrastructures : les datacenters et supercalculateurs de Scaleway</h1>
+          <p class="lede">Scaleway fait tourner son cloud depuis des datacenters à Paris, Amsterdam, Varsovie et Milan. Cette page montre où ils se trouvent, comment ils sont refroidis et quelle puissance ils réservent à l'intelligence artificielle.</p>
+          <ul class="atouts">
+            <li>4&nbsp;régions européennes et 10&nbsp;zones de disponibilité.</li>
+            <li>Un PUE moyen de 1,37 en 2024, contre 1,55 pour le secteur.</li>
+            <li>Un supercalculateur de 1&nbsp;016 GPU hébergé dans le datacenter DC5.</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn" href="pageX">Découvrir l'entreprise</a>
+            <a class="btn btn--ghost" href="pageX">Voir les services</a>
+          </div>
+        </div>
+
+        <figure class="hero-visual">
+          <svg viewBox="0 0 360 250" role="img" aria-labelledby="carte-titre carte-desc">
+            <title id="carte-titre">Les quatre régions de Scaleway en Europe</title>
+            <desc id="carte-desc">Schéma de position approximative : Paris, Amsterdam et Varsovie ont chacune trois zones de disponibilité, Milan en a une.</desc>
+            <rect class="map-bg" x="0" y="0" width="360" height="250" rx="16"/>
+            <circle class="map-dot" cx="91" cy="63" r="12"/>
+            <text class="map-name" x="110" y="58">Amsterdam</text>
+            <text class="map-sub" x="110" y="75">3 zones : AMS1 à AMS3</text>
+
+            <circle class="map-dot" cx="293" cy="65" r="12"/>
+            <text class="map-name" x="345" y="100" text-anchor="end">Varsovie</text>
+            <text class="map-sub" x="345" y="117" text-anchor="end">3 zones : WAW1 à WAW3</text>
+
+            <circle class="map-dot" cx="59" cy="133" r="12"/>
+            <text class="map-name" x="78" y="128">Paris</text>
+            <text class="map-sub" x="78" y="145">3 zones : PAR1 à PAR3</text>
+
+            <circle class="map-dot map-dot--small" cx="145" cy="201" r="8"/>
+            <text class="map-name" x="162" y="198">Milan</text>
+            <text class="map-sub" x="162" y="215">1 zone : MIL1</text>
+          </svg>
+          <figcaption>Positions approximatives. La taille du point indique le nombre de zones de la région.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Où sont les datacenters ? ===== -->
+    <section class="section section--alt" id="datacenters" aria-labelledby="titre-datacenters">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="titre-datacenters">Où sont les datacenters de Scaleway ?</h2>
+          <p>Scaleway découpe son infrastructure en régions, elles-mêmes divisées en zones de disponibilité : des emplacements isolés, avec leurs propres équipements. Répartir ses applications sur plusieurs zones permet de continuer à fonctionner si l'une d'elles tombe en panne.</p>
+        </div>
+
+        <ul class="regions">
+          <li class="region">
+            <h3>Paris</h3>
+            <p class="zones">PAR1, PAR2, PAR3</p>
+            <p>Quatre datacenters nommés DC2 à DC5, dont DC5 à Saint-Ouen-l'Aumône (Val-d'Oise), présenté plus bas.</p>
+          </li>
+          <li class="region">
+            <h3>Amsterdam</h3>
+            <p class="zones">AMS1, AMS2, AMS3</p>
+            <p>Installée dans des datacenters loués, selon la presse en 2021. Les trois sites affichent un PUE entre 1,2 et 1,4.</p>
+          </li>
+          <li class="region">
+            <h3>Varsovie</h3>
+            <p class="zones">WAW1, WAW2, WAW3</p>
+            <p>Ouverte en 2020 pour toucher l'Europe de l'Est, d'abord avec des instances et du stockage objet seulement.</p>
+          </li>
+          <li class="region">
+            <h3>Milan</h3>
+            <p class="zones">MIL1</p>
+            <p>Une seule zone dans la documentation de Scaleway. Nous n'avons pas trouvé de chiffres environnementaux pour ce site.</p>
+          </li>
+        </ul>
+
+        <h3>Deux indicateurs pour comparer les sites</h3>
+        <p>Le <strong>PUE</strong> (Power Usage Effectiveness) compare l'énergie totale consommée par le datacenter à celle des seuls serveurs. 1,0 serait idéal : plus il est bas, mieux c'est. Le <strong>WUE</strong> (Water Usage Effectiveness) rapporte l'eau utilisée à l'énergie des serveurs, en litres par kWh.</p>
+
+        <div class="table-wrap">
+          <table>
+            <caption>Les sept sites détaillés dans le bilan 2024 de Scaleway</caption>
+            <thead>
+              <tr>
+                <th scope="col">Site</th>
+                <th scope="col">Région</th>
+                <th scope="col">PUE</th>
+                <th scope="col">WUE</th>
+                <th scope="col">Refroidissement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">DC2</th>
+                <td>Paris (PAR1)</td>
+                <td class="num">1,45</td>
+                <td class="num">0,009</td>
+                <td>Circuit d'eau glacée</td>
+              </tr>
+              <tr>
+                <th scope="row">DC3</th>
+                <td>Paris (PAR1)</td>
+                <td class="num">1,39</td>
+                <td class="num">0,00009</td>
+                <td>Free cooling indirect, circuit fermé d'eau glacée</td>
+              </tr>
+              <tr>
+                <th scope="row">DC4</th>
+                <td>Paris</td>
+                <td class="num">1,44</td>
+                <td class="num">0,00002</td>
+                <td>Refroidissement direct avec compresseur variable</td>
+              </tr>
+              <tr class="is-focus">
+                <th scope="row">DC5</th>
+                <td>Paris (PAR2)</td>
+                <td class="num">1,25</td>
+                <td class="num">0,25</td>
+                <td>Free cooling direct et refroidissement adiabatique</td>
+              </tr>
+              <tr>
+                <th scope="row">AMS1</th>
+                <td>Amsterdam</td>
+                <td class="num">1,38</td>
+                <td class="num">1,64</td>
+                <td>Circuit fermé d'eau chaude</td>
+              </tr>
+              <tr>
+                <th scope="row">AMS2</th>
+                <td>Amsterdam</td>
+                <td class="num">1,40</td>
+                <td class="num">non communiqué</td>
+                <td>Free cooling, free chilling et immersion</td>
+              </tr>
+              <tr>
+                <th scope="row">AMS3</th>
+                <td>Amsterdam</td>
+                <td class="num">1,20</td>
+                <td class="num">non communiqué</td>
+                <td>Free cooling, free chilling et immersion</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Source : Scaleway, données 2024. Les chiffres détaillés que nous avons consultés portent sur Paris et Amsterdam.</p>
+      </div>
+    </section>
+
+    <!-- ===== DC5 ===== -->
+    <section class="section" id="dc5" aria-labelledby="titre-dc5">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="titre-dc5">DC5, le datacenter conçu pour économiser l'énergie</h2>
+          <p>DC5 est le site le plus efficace de Paris : son PUE de 1,25 est le plus bas de la région. Scaleway l'a conçu et construit dans l'ancien centre de tri de Pontoise. Il a ouvert début 2019.</p>
+        </div>
+
+        <div class="two-col">
+          <dl class="facts">
+            <div>
+              <dt>Refroidissement</dt>
+              <dd>De l'air extérieur circule autour des serveurs. Quand il fait chaud, de l'eau s'évapore dans cet air pour le rafraîchir : c'est le refroidissement adiabatique.</dd>
+            </div>
+            <div>
+              <dt>Efficacité annoncée</dt>
+              <dd>Jusqu'à 40&nbsp;% d'énergie en moins que la plupart des datacenters, selon Scaleway à l'ouverture de la zone PAR2 en 2020.</dd>
+            </div>
+            <div>
+              <dt>Électricité</dt>
+              <dd>100&nbsp;% éolienne ou hydraulique, via des garanties d'origine (voir les points à nuancer).</dd>
+            </div>
+            <div>
+              <dt>Usage</dt>
+              <dd>Il héberge les clusters d'IA les plus gourmands de Scaleway, dont le supercalculateur Nabu.</dd>
+            </div>
+          </dl>
+
+          <div>
+            <h3>Un PUE qui a un peu monté</h3>
+            <p>À l'ouverture de PAR2 en 2020, Scaleway annonçait un PUE de 1,15. Le bilan 2024 indique 1,25. Scaleway associe ce chiffre à ses clusters d'IA, plus difficiles à refroidir.</p>
+            <div class="note">
+              <h3>Moins d'électricité, plus d'eau</h3>
+              <p>Le WUE de DC5 est de 0,25, contre 0,009 pour DC2. Refroidir par évaporation économise de l'électricité, mais consomme de l'eau. Scaleway affirme refuser les tours de refroidissement qui utilisent des millions de mètres cubes d'eau potable.</p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="schema">
+          <svg viewBox="0 28 680 94" role="img" aria-labelledby="sch-titre sch-desc">
+            <title id="sch-titre">Principe du refroidissement adiabatique de DC5</title>
+            <desc id="sch-desc">L'air extérieur reçoit de l'eau qui s'évapore quand il fait chaud, passe dans l'allée froide, traverse les serveurs puis est rejeté chaud vers l'extérieur.</desc>
+            <defs>
+              <marker id="fleche" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                <path class="sch-head" d="M0,0 L8,4 L0,8 z"/>
+              </marker>
+            </defs>
+
+            <rect class="sch-box" x="8" y="40" width="112" height="70" rx="8"/>
+            <text class="sch-text" x="64" y="70">Air</text>
+            <text class="sch-text" x="64" y="88">extérieur</text>
+
+            <rect class="sch-box sch-box--water" x="146" y="40" width="112" height="70" rx="8"/>
+            <text class="sch-text" x="202" y="62">Eau qui</text>
+            <text class="sch-text" x="202" y="79">s'évapore</text>
+            <text class="sch-text" x="202" y="96">si chaud</text>
+
+            <rect class="sch-box" x="284" y="40" width="112" height="70" rx="8"/>
+            <text class="sch-text" x="340" y="70">Allée</text>
+            <text class="sch-text" x="340" y="88">froide</text>
+
+            <rect class="sch-box" x="422" y="40" width="112" height="70" rx="8"/>
+            <text class="sch-text" x="478" y="70">Serveurs</text>
+            <text class="sch-text" x="478" y="88">et GPU</text>
+
+            <rect class="sch-box" x="560" y="40" width="112" height="70" rx="8"/>
+            <text class="sch-text" x="616" y="70">Air chaud</text>
+            <text class="sch-text" x="616" y="88">rejeté</text>
+
+            <line class="sch-arrow" x1="122" y1="75" x2="143" y2="75" marker-end="url(#fleche)"/>
+            <line class="sch-arrow" x1="260" y1="75" x2="281" y2="75" marker-end="url(#fleche)"/>
+            <line class="sch-arrow" x1="398" y1="75" x2="419" y2="75" marker-end="url(#fleche)"/>
+            <line class="sch-arrow" x1="536" y1="75" x2="557" y2="75" marker-end="url(#fleche)"/>
+          </svg>
+          <figcaption>Schéma simplifié du refroidissement adiabatique, d'après la description de Scaleway.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== IA et calcul haute performance ===== -->
+    <section class="section section--alt" id="ia" aria-labelledby="titre-ia">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="titre-ia">Les infrastructures pour l'intelligence artificielle</h2>
+          <p>Scaleway loue de la puissance de calcul à des entreprises d'IA. Son offre phare est le supercalculateur Nabuchodonosor, « Nabu », installé dans DC5.</p>
+        </div>
+
+        <p class="ia-intro">Nabu réunit 127 systèmes NVIDIA DGX H100 de 8 GPU chacun, soit 1&nbsp;016 GPU. NVIDIA indique que Scaleway l'a monté en deux mois environ. Scaleway en a détaillé l'offre le 5&nbsp;octobre 2023, quelques jours après l'annonce par le groupe iliad d'un investissement de 200&nbsp;M€ dans l'IA.</p>
+
+        <div class="table-wrap">
+          <table>
+            <caption>Les deux supercalculateurs d'IA de Scaleway</caption>
+            <thead>
+              <tr>
+                <th scope="col">Caractéristique</th>
+                <th scope="col">Nabu 2023</th>
+                <th scope="col">Jeroboam 2023</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">GPU</th>
+                <td>1&nbsp;016 NVIDIA H100</td>
+                <td>16 NVIDIA H100</td>
+              </tr>
+              <tr>
+                <th scope="row">Puissance maximale annoncée</th>
+                <td>4&nbsp;021,3 PFLOPS</td>
+                <td>63,2 PFLOPS</td>
+              </tr>
+              <tr>
+                <th scope="row">Rôle</th>
+                <td>Entraîner de très grands modèles</td>
+                <td>Valider un modèle avant un entraînement à grande échelle</td>
+              </tr>
+              <tr>
+                <th scope="row">Hébergement</th>
+                <td>DC5, Paris</td>
+                <td>DC5, Paris</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul class="users">
+          <li>Kyutai a entraîné <strong>Moshi</strong>, un assistant vocal open source, sur Nabu.</li>
+          <li>Mistral AI a utilisé Nabu pour son modèle <strong>Mixtral</strong>.</li>
+        </ul>
+
+        <h3 class="sous-titre">2026 : le rachat de Qarnot pour le calcul haute performance</h3>
+        <p>Le 10&nbsp;juillet 2026, Scaleway a racheté Qarnot, spécialiste du calcul haute performance (HPC) pour la simulation, l'ingénierie et la recherche. Qarnot utilise un refroidissement liquide direct breveté qui permet de récupérer jusqu'à 95&nbsp;% de la chaleur des serveurs, par exemple pour alimenter un réseau de chauffage urbain, comme à Brescia en Italie.</p>
+        <p>Qarnot avait été placée en redressement judiciaire le 19&nbsp;mai 2026. Scaleway présente l'opération comme un atout : elle serait le seul fournisseur européen de cloud souverain à réunir cloud, IA et HPC sur une même plateforme.</p>
+      </div>
+    </section>
+
+    <!-- ===== Frise chronologique ===== -->
+    <section class="section" id="historique" aria-labelledby="titre-historique">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="titre-historique">Cinq dates pour comprendre l'infrastructure</h2>
+        </div>
+        <ol class="frise">
+          <li>
+            <span class="annee">2019</span>
+            <p>Ouverture de DC5 à Saint-Ouen-l'Aumône, avec son refroidissement adiabatique.</p>
+          </li>
+          <li>
+            <span class="annee">2020</span>
+            <p>Ouverture de la zone PAR2 dans DC5 et d'une région à Varsovie : 6 datacenters dans 3 régions.</p>
+          </li>
+          <li>
+            <span class="annee">2023</span>
+            <p>Lancement des supercalculateurs d'IA Nabu et Jeroboam, hébergés dans DC5.</p>
+          </li>
+          <li>
+            <span class="annee">2024</span>
+            <p>PUE moyen publié de 1,37, contre 1,55 pour le secteur.</p>
+          </li>
+          <li>
+            <span class="annee">2026</span>
+            <p>Rachat de Qarnot : calcul haute performance et récupération de chaleur.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Empreinte numérique ===== -->
+    <section class="section section--alt" id="empreinte" aria-labelledby="titre-empreinte">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="titre-empreinte">Empreinte numérique : ce que Scaleway affirme et ce qu'il faut nuancer</h2>
+          <p>Scaleway met en avant des datacenters plus sobres que la moyenne. Les chiffres vont dans ce sens, mais ils demandent quelques précautions de lecture.</p>
+        </div>
+
+        <figure class="chart">
+          <figcaption>PUE 2024 par site, comparé à la moyenne du secteur</figcaption>
+          <svg viewBox="0 0 640 345" role="img" aria-labelledby="pue-titre pue-desc">
+            <title id="pue-titre">PUE 2024 des datacenters de Scaleway</title>
+            <desc id="pue-desc">Du plus bas au plus haut : AMS3 1,20 ; DC5 1,25 ; moyenne Scaleway 1,37 ; AMS1 1,38 ; DC3 1,39 ; AMS2 1,40 ; DC4 1,44 ; DC2 1,45. La moyenne du secteur est de 1,55.</desc>
+
+            <line class="ch-grid" x1="150" y1="18" x2="150" y2="292"/>
+            <line class="ch-grid" x1="283.3" y1="18" x2="283.3" y2="292"/>
+            <line class="ch-grid" x1="416.7" y1="18" x2="416.7" y2="292"/>
+            <line class="ch-grid" x1="550" y1="18" x2="550" y2="292"/>
+
+            <text class="ch-label" x="140" y="39">AMS3</text>
+            <rect class="ch-bar" x="150" y="22" width="133.3" height="24" rx="3"/>
+            <text class="ch-value" x="291" y="39">1,20</text>
+
+            <text class="ch-label" x="140" y="73">DC5 (Paris)</text>
+            <rect class="ch-bar" x="150" y="56" width="166.7" height="24" rx="3"/>
+            <text class="ch-value" x="325" y="73">1,25</text>
+
+            <text class="ch-label" x="140" y="107">Moyenne Scaleway</text>
+            <rect class="ch-bar ch-bar--avg" x="150" y="90" width="246.7" height="24" rx="3"/>
+            <text class="ch-value" x="405" y="107">1,37</text>
+
+            <text class="ch-label" x="140" y="141">AMS1</text>
+            <rect class="ch-bar" x="150" y="124" width="253.3" height="24" rx="3"/>
+            <text class="ch-value" x="411" y="141">1,38</text>
+
+            <text class="ch-label" x="140" y="175">DC3 (Paris)</text>
+            <rect class="ch-bar" x="150" y="158" width="260" height="24" rx="3"/>
+            <text class="ch-value" x="418" y="175">1,39</text>
+
+            <text class="ch-label" x="140" y="209">AMS2</text>
+            <rect class="ch-bar" x="150" y="192" width="266.7" height="24" rx="3"/>
+            <text class="ch-value" x="425" y="209">1,40</text>
+
+            <text class="ch-label" x="140" y="243">DC4 (Paris)</text>
+            <rect class="ch-bar" x="150" y="226" width="293.3" height="24" rx="3"/>
+            <text class="ch-value" x="451" y="243">1,44</text>
+
+            <text class="ch-label" x="140" y="277">DC2 (Paris)</text>
+            <rect class="ch-bar" x="150" y="260" width="300" height="24" rx="3"/>
+            <text class="ch-value" x="458" y="277">1,45</text>
+
+            <line class="ch-ref" x1="516.7" y1="22" x2="516.7" y2="292"/>
+            <text class="ch-ref-label" x="516.7" y="14">Moyenne du secteur : 1,55</text>
+
+            <line class="ch-axis" x1="150" y1="292" x2="550" y2="292"/>
+            <text class="ch-tick" x="150" y="311">1,0</text>
+            <text class="ch-tick" x="283.3" y="311">1,2</text>
+            <text class="ch-tick" x="416.7" y="311">1,4</text>
+            <text class="ch-tick" x="550" y="311">1,6</text>
+            <text class="ch-tick" x="350" y="334">PUE (1,0 = idéal théorique, plus bas = mieux)</text>
+          </svg>
+        </figure>
+
+        <p>Les sept sites sont sous la moyenne du secteur, et DC5 comme AMS3 sont nettement meilleurs. Mais plusieurs précisions s'imposent.</p>
+
+        <ul class="nuances">
+          <li>
+            <h3>Une énergie verte sur certificat</h3>
+            <p>Le bilan parle de 100&nbsp;% d'énergie éolienne ou hydraulique, avec des garanties d'origine. Ces certificats attestent qu'une quantité équivalente d'électricité verte a été produite, pas que chaque serveur est relié à une éolienne. Le site Next rappelle que les datacenters restent alimentés par le réseau classique.</p>
+          </li>
+          <li>
+            <h3>Des chiffres publiés par Scaleway</h3>
+            <p>Le PUE et le WUE viennent du bilan de l'entreprise elle-même. Les sources consultées ne mentionnent pas de contrôle par un organisme indépendant.</p>
+          </li>
+          <li>
+            <h3>L'eau, l'autre face du refroidissement</h3>
+            <p>DC5 a le meilleur PUE de Paris (1,25 contre 1,39 à 1,45 ailleurs), mais un WUE de 0,25 contre 0,009 pour DC2. Un site économe en électricité n'est pas forcément économe en eau.</p>
+          </li>
+          <li>
+            <h3>La fiabilité : la panne de mai 2026</h3>
+            <p>Le 22&nbsp;mai 2026, une panne électrique complète dans les salles de l'opérateur du datacenter, pendant une maintenance planifiée, a touché les trois zones de Paris. Scaleway a indiqué fonctionner sur groupes électrogènes. L'incident a duré environ 27&nbsp;heures.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Sources et suite ===== -->
+    <section class="section" id="sources" aria-labelledby="titre-sources">
+      <div class="container">
+        <h2 id="titre-sources">Sources</h2>
+        <ul class="sources">
+          <li><a href="https://www.scaleway.com/fr/leadership-environnemental/">Scaleway : engagement environnemental et données 2024</a></li>
+          <li><a href="https://www.scaleway.com/en/docs/account/reference-content/products-availability/">Scaleway Docs : régions et zones de disponibilité</a></li>
+          <li><a href="https://scaleway.com/en/ai-supercomputers">Scaleway : supercalculateurs d'IA Nabu et Jeroboam</a></li>
+          <li><a href="https://www.scaleway.com/fr/news/scaleway-detaille-loffre-de-son-supercalculateur-dedie-a-lia-nabuchodonosor-base-sur-linfrastructure-nvidia-dgx-h100/">Scaleway : communiqué du 5 octobre 2023 sur Nabuchodonosor</a></li>
+          <li><a href="https://www.nvidia.com/fr-fr/case-studies/transforming-europe-ai-landscape/">NVIDIA : étude de cas sur Scaleway</a></li>
+          <li><a href="https://www.journaldunet.com/intelligence-artificielle/1525175-damien-lucas-scaleway/">Journal du Net : interview de Damien Lucas, PDG de Scaleway</a></li>
+          <li><a href="https://www.capacitymedia.com/article/29otckqx2h8okpvql8cu8/news/scaleway-unveils-second-availability-zone-in-paris">Capacity Media : ouverture de la zone PAR2 en 2020</a></li>
+          <li><a href="https://next.ink/2703/scaleway-ouvre-sa-zone-par2-au-sein-dc5-dautres-nouveautes-en-approche/">Next : la zone PAR2 au sein de DC5</a></li>
+          <li><a href="https://next.ink/2185/scaleway-ouvre-son-abri-anti-atomique-dc4-a-iaas-setend-en-europe-et-embauche/">Next : DC4 et l'extension européenne de Scaleway</a></li>
+          <li><a href="https://www-uploads.scaleway.com/CP_Scaleway_Qarnot_FR_139840a1cb.pdf">Scaleway : communiqué du 10 juillet 2026 sur Qarnot (PDF)</a></li>
+          <li><a href="https://datacentrenews.uk/story/scaleway-buys-qarnot-to-boost-european-hpc-platform">DataCentre News : Scaleway rachète Qarnot</a></li>
+          <li><a href="https://www.actuia.com/acteur/scaleway/">ActuIA : fiche Scaleway, dont le redressement judiciaire de Qarnot</a></li>
+          <li><a href="https://status.scaleway.com/incidents/qkj49g6g3ykp">Scaleway Status : incident FR-PAR-2 du 22 mai 2026</a></li>
+          <li><a href="https://www.openstatus.dev/status/scaleway/dc5">OpenStatus : historique des incidents de DC5</a></li>
+        </ul>
+
+        <div class="pages-liees">
+          <a class="btn btn--ghost" href="entreprise.html">Découvrir l'entreprise</a>
+          <a class="btn btn--ghost" href="services.html">Voir les services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">Swaycloud</p>
+          <p>Site d'information sur Scaleway, réalisé pour la SAÉ S1.05-06 du BUT Informatique.</p>
+        </div>
+        <div>
+          <p class="footer-title">Auteur de cette page</p>
+          <p>Page « Infrastructures » : Mathéo GUIPET</p>
+        </div>
+        <div>
+          <p class="footer-title">Groupe 9</p>
+          <!-- À compléter : ajouter le 4e membre du groupe (le nom de Mathéo GUIPET apparaît deux fois dans les questionnaires) -->
+          <ul>
+            <li>Eline ICIAKHENE (référente)</li>
+            <li>Mathéo GUIPET</li>
+            <li>Thomas GOBERT</li>
+          </ul>
+        </div>
+      </div>
+      <p class="legal">Informations issues des sources publiques listées ci-dessus, consultées en octobre 2026.</p>
+    </div>
+  </footer>
 </body>
 </html>
