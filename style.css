@@ -16,108 +16,68 @@ body {
 
 /* ==================== MENU ==================== */
 
-:root {
-  --ink: #1b1d3a;
-  --violet: #4c1aa8;
-  --violet-dark: #3a1383;
-  --violet-soft: #eeebfb;
-  --surface: #ffffff;
-  --line: #ddd8ee;
-
-  --font-title: "ADLaM Display", "Trebuchet MS", "Segoe UI", Arial, sans-serif;
-
-  --radius-pill: 999px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --ink: #eceaf8;
-    --violet: #a58bf0;
-    --violet-dark: #c9b9f7;
-    --violet-soft: #2a2450;
-    --surface: #1c1b38;
-    --line: #38355f;
-  }
-}
-
 .container {
-  width: min(1120px, 100% - 3rem);
-  margin-inline: auto;
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
 }
 
-/* ---------- En-tête et menu ---------- */
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: var(--surface);
-  border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    border-bottom: 1px solid #ddd8ee;
 }
 
 .header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  min-height: 4.25rem;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 68px;
+    flex-wrap: wrap;
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-family: var(--font-title);
-  font-size: 1.4rem;
-  color: var(--ink);
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'ADLaM Display', 'Trebuchet MS', Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #1b1d3a;
+    text-decoration: none;
 }
 
 .brand:hover {
-  color: var(--violet);
-}
-
-.brand img {
-  display: block;
-  width: 34px;
-  height: 34px;
+    color: #4c1aa8;
 }
 
 .main-nav ul {
-  display: flex;
-  gap: 0.25rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
 }
 
 .main-nav a {
-  display: block;
-  padding: 0.55rem 1.05rem;
-  border-radius: var(--radius-pill);
-  color: var(--ink);
-  text-decoration: none;
-  font-size: 1.05rem;
+    display: block;
+    padding: 9px 17px;
+    border-radius: 999px;
+    color: #1b1d3a;
+    text-decoration: none;
 }
 
 .main-nav a:hover {
-  background: var(--violet-soft);
-  color: var(--violet-dark);
+    background-color: #eeebfb;
+    color: #3a1383;
 }
 
 .main-nav a[aria-current="page"] {
-  background: var(--violet);
-  color: #fff;
+    background-color: #4c1aa8;
+    color: white;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .main-nav a[aria-current="page"] {
-    color: #14132a;
-  }
-}
-
-
 /* ==================== ACCUEIL ==================== */
 
 .accueil {
