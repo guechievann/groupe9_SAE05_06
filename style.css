@@ -74,7 +74,7 @@ body {
     color: #3a1383;
 }
 
-.main-nav a[aria-current="page"] {
+.main-nav a.actif {
     background-color: #4c1aa8;
     color: white;
 }
