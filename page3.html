@@ -24,14 +24,73 @@
       </nav>
     </div>
   </header>
-    <h1>Infrastructures</h1>
-    <p>
-      Les infrastructures de Scaleway sont 100 % européennes. Les données sont stockées et traitées en Europe.
-      <br>
-      Cela réduit leur dépendance vis-à-vis des géants américains et asiatiques.
-      <br>
-      Scaleway se présente ainsi comme l'alternative européenne aux très grands fournisseurs de cloud comme Amazon, Microsoft ou Google Cloud.
-    </p>
+
+    <main>
+
+    <section class="section">
+      <div class="container haut">
+        <div class="texte">
+          <h1>Les infrastructures de Scaleway</h1>
+          <p>Scaleway fait fonctionner son cloud grâce à des datacenters situés à Paris, Amsterdam, Varsovie et Milan. Cette page montre où ils se trouvent, comment ils sont refroidis et ce qu'il faut en penser.</p>
+          <a class="btn" href="#datacenters">Voir les datacenters</a>
+          <a class="btn btn--ghost" href="#bilan">Voir le bilan</a>
+        </div>
+        <div class="carte">
+          <img src="img/carte-regions.png" width="648" height="450" alt="Carte des quatre régions de Scaleway : Amsterdam, Varsovie, Paris et Milan.">
+          <p>Positions approximatives. La taille du point indique le nombre de zones.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="datacenters">
+      <div class="container">
+        <h2>Où sont les datacenters ?</h2>
+        <p>Scaleway a quatre régions en Europe : Paris, Amsterdam et Varsovie ont chacune trois zones, et Milan en a une. Une zone est un emplacement isolé, avec ses propres équipements.</p>
+        <p>Pour comparer les sites, on utilise le <strong>PUE</strong> : c'est l'énergie totale consommée par le datacenter divisée par celle des serveurs. Plus il est proche de 1, mieux c'est.</p>
+        <img src="img/tableau-datacenters.png" width="1100" height="500" alt="Tableau des sept sites avec leur PUE, leur WUE et leur refroidissement. DC5 a le meilleur PUE de Paris (1,25) et AMS3 le meilleur de tous (1,20).">
+        <p>Source : Scaleway, données 2024.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>DC5, le datacenter économe</h2>
+        <p>DC5 est situé à Saint-Ouen-l'Aumône et a ouvert en 2019. Il est refroidi avec de l'air extérieur : quand il fait chaud, de l'eau s'évapore dans cet air pour le rafraîchir. C'est le refroidissement adiabatique.</p>
+        <img src="img/schema-refroidissement.png" width="1100" height="188" alt="Schéma : l'air extérieur reçoit de l'eau qui s'évapore, passe dans l'allée froide, traverse les serveurs puis est rejeté chaud.">
+        <p>DC5 héberge aussi Nabu, le supercalculateur d'IA de Scaleway, qui compte 1 016 GPU.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="bilan">
+      <div class="container">
+        <h2>Le bilan environnemental</h2>
+        <p>Scaleway annonce un PUE moyen de 1,37 en 2024, contre 1,55 pour le secteur.</p>
+        <img src="img/graphique-pue.png" width="1100" height="620" alt="Graphique du PUE de chaque site : tous sont sous la moyenne du secteur (1,55).">
+        <h3>Ce qu'il faut nuancer</h3>
+        <ul>
+          <li>Les chiffres viennent de Scaleway lui-même, sans contrôle indépendant mentionné.</li>
+          <li>L'énergie « 100 % verte » repose sur des certificats, pas sur un branchement direct à une éolienne.</li>
+          <li>DC5 économise de l'électricité mais consomme plus d'eau que DC2.</li>
+          <li>En mai 2026, une panne électrique a touché les trois zones de Paris pendant environ 27 heures.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="https://www.scaleway.com/fr/leadership-environnemental/">Scaleway : engagement environnemental</a></li>
+          <li><a href="https://www.scaleway.com/en/docs/account/reference-content/products-availability/">Scaleway Docs : régions et zones</a></li>
+          <li><a href="https://scaleway.com/en/ai-supercomputers">Scaleway : supercalculateurs d'IA</a></li>
+          <li><a href="https://status.scaleway.com/incidents/qkj49g6g3ykp">Scaleway Status : incident du 22 mai 2026</a></li>
+        </ul>
+        <a class="btn btn--ghost" href="entreprise.html">Découvrir l'entreprise</a>
+        <a class="btn btn--ghost" href="services.html">Voir les services</a>
+      </div>
+    </section>
+
+  </main>
         
     
     <footer> Auteur : Mathéo Guipet </footer> 
