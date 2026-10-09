@@ -22,7 +22,21 @@ body {
     margin: 0 auto;
 }
 
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    border-bottom: 1px solid #ddd8ee;
+}
 
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 68px;
+    flex-wrap: wrap;
+}
 
 .brand {
     display: flex;
