@@ -83,7 +83,15 @@
 }
 
 /* ---------- En-têtes de section ---------- */
+.section-head {
+  max-width: 46rem;
+  margin-bottom: 2.5rem;
+}
 
+.section-head p {
+  color: var(--ink-soft);
+  font-size: 1.15rem;
+}
 
 /* ---------- Régions ---------- */
 .regions {
