@@ -180,3 +180,506 @@ footer {
     }
 
 }
+
+/* ===================INFRA ================== */
+
+.hero {
+  padding-block: 4rem 4.5rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.hero .lede {
+  font-size: 1.25rem;
+  color: var(--ink-soft);
+}
+
+.atouts {
+  margin: 1.75rem 0 2rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.atouts li {
+  position: relative;
+  padding-left: 1.6rem;
+  max-width: var(--measure);
+}
+
+.atouts li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 2px;
+  background: var(--teal);
+}
+
+.cta-row {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  background: var(--violet-soft);
+  border-radius: var(--radius-panel);
+  padding: 1.5rem 1.5rem 1rem;
+  margin: 0;
+}
+
+.hero-visual figcaption {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  padding-top: 0.5rem;
+}
+
+.map-bg {
+  fill: var(--surface);
+}
+
+.map-dot {
+  fill: var(--violet);
+}
+
+.map-dot--small {
+  fill: var(--teal);
+}
+
+.map-name {
+  fill: var(--ink);
+  font-family: var(--font-title);
+  font-size: 15px;
+}
+
+.map-sub {
+  fill: var(--ink-soft);
+  font-family: var(--font-text);
+  font-size: 12.5px;
+}
+
+/* ---------- En-têtes de section ---------- */
+.section-head {
+  max-width: 46rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-head p {
+  color: var(--ink-soft);
+  font-size: 1.15rem;
+}
+
+/* ---------- Régions ---------- */
+.regions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 0 0 3rem;
+  padding: 0;
+  list-style: none;
+}
+
+.region {
+  border-top: 4px solid var(--violet);
+  padding-top: 1rem;
+}
+
+.region h3 {
+  margin-bottom: 0.25rem;
+}
+
+.region .zones {
+  font-size: 1rem;
+  color: var(--teal);
+  margin-bottom: 0.5rem;
+}
+
+.region p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* ---------- Tableaux ---------- */
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-box);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  min-width: 640px;
+}
+
+caption {
+  text-align: left;
+  padding: 1rem 1.1rem;
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+th,
+td {
+  padding: 0.75rem 1.1rem;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid var(--line);
+}
+
+thead th {
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 400;
+  font-family: var(--font-title);
+  font-size: 0.95rem;
+  border-top: 0;
+}
+
+tbody th {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+tr.is-focus th,
+tr.is-focus td {
+  background: var(--violet-soft);
+}
+
+td.num {
+  white-space: nowrap;
+}
+
+.table-note {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin-top: 0.9rem;
+}
+
+/* ---------- DC5 : texte + schéma ---------- */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.facts {
+  margin: 0;
+  display: grid;
+  gap: 0;
+}
+
+.facts div {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.facts div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.facts dt {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  color: var(--violet);
+}
+
+.facts dd {
+  margin: 0;
+}
+
+.schema {
+  margin: 2.5rem 0 0;
+}
+
+.schema svg {
+  display: block;
+  width: 100%;
+}
+
+.schema figcaption {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin-top: 0.5rem;
+}
+
+.sch-box {
+  fill: var(--surface);
+  stroke: var(--violet);
+  stroke-width: 2;
+}
+
+.sch-box--water {
+  fill: var(--teal-soft);
+  stroke: var(--teal);
+}
+
+.sch-text {
+  fill: var(--ink);
+  font-family: var(--font-text);
+  font-size: 13px;
+  text-anchor: middle;
+}
+
+.sch-arrow {
+  stroke: var(--ink-soft);
+  stroke-width: 2;
+  fill: none;
+}
+
+.sch-head {
+  fill: var(--ink-soft);
+}
+
+/* ---------- Encadré « à nuancer » ---------- */
+.note {
+  border-left: 5px solid var(--teal);
+  background: var(--teal-soft);
+  padding: 1.1rem 1.4rem;
+  border-radius: 0 var(--radius-box) var(--radius-box) 0;
+  margin: 2rem 0 0;
+  max-width: 52rem;
+}
+
+.note h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.note p {
+  margin-bottom: 0;
+}
+
+/* ---------- IA ---------- */
+.sous-titre {
+  margin-top: 3rem;
+}
+
+.ia-intro {
+  max-width: 46rem;
+  margin-bottom: 2rem;
+}
+
+.users {
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.users li {
+  padding-left: 1.6rem;
+  position: relative;
+  max-width: var(--measure);
+}
+
+.users li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--violet);
+}
+
+/* ---------- Frise chronologique ---------- */
+.frise {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+.frise li {
+  position: relative;
+  padding-top: 1.75rem;
+  border-top: 3px solid var(--line);
+}
+
+.frise li::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--violet);
+  border: 3px solid var(--bg);
+}
+
+.frise li:last-child::before {
+  background: var(--teal);
+}
+
+.frise .annee {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: var(--violet);
+  margin-bottom: 0.25rem;
+}
+
+.frise p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ---------- Graphique PUE ---------- */
+.chart {
+  margin: 0 0 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  padding: 1.5rem;
+}
+
+.chart figcaption {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.chart svg {
+  display: block;
+  width: 100%;
+}
+
+.ch-label {
+  fill: var(--ink);
+  font-family: var(--font-text);
+  font-size: 14px;
+  text-anchor: end;
+}
+
+.ch-value {
+  fill: var(--ink);
+  font-family: var(--font-text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ch-bar {
+  fill: var(--violet);
+}
+
+.ch-bar--avg {
+  fill: var(--teal);
+}
+
+.ch-axis {
+  stroke: var(--ink-soft);
+  stroke-width: 1.5;
+}
+
+.ch-grid {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.ch-tick {
+  fill: var(--ink-soft);
+  font-family: var(--font-text);
+  font-size: 13px;
+  text-anchor: middle;
+}
+
+.ch-ref {
+  stroke: var(--focus);
+  stroke-width: 2;
+  stroke-dasharray: 6 5;
+}
+
+.ch-ref-label {
+  fill: var(--ink);
+  font-family: var(--font-text);
+  font-size: 13px;
+  text-anchor: middle;
+}
+
+/* ---------- Points à nuancer ---------- */
+.nuances {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nuances li {
+  border-top: 4px solid var(--teal);
+  padding-top: 1rem;
+}
+
+.nuances h3 {
+  font-size: 1.15rem;
+}
+
+.nuances p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* ---------- Sources ---------- */
+.sources {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.45rem;
+  font-size: 1rem;
+}
+
+.sources li {
+  max-width: 62rem;
+}
+
+.pages-liees {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+/* ---------- Adaptation aux écrans étroits ---------- */
+@media (max-width: 900px) {
+  .hero-grid,
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .frise {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-block: 3rem;
+  }
+
+  .facts div {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+}
