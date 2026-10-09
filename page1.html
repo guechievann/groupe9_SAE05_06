@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entreprise</title>
+    <title>Entreprise – Scaleway</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico">
     <style>
@@ -11,53 +11,114 @@
     </style>
 </head>
 <body>
-    <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="images/logo.png" width="34" height="34" alt="">
-        <span>Swaycloud</span>
-      </a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-            <li><a href="page1.html" class="actif">Entreprise</a></li>
-          <li><a href="page2.html">Services</a></li>
-          <li><a href="page3.html">Infrastructures</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-    <h1>Scaleway</h1>
-   
-    <div style="width: 100%; padding: 20px; line-height: 1.8; box-sizing: border-box;">
-        <div id="text1" style="font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; color: #7b219b; text-align: center;">Scaleway : Le pionnier européen du cloud computing</div>
 
-        <!-- Paragraphe 1 : image à droite -->
-        <div style="display: flex; align-items: center; gap: 25px; margin-bottom: 30px;">
-            <p id="p1" style="margin: 0; flex: 1; min-width: 0;">
-                Fondée en 1999 et filiale du groupe Iliad, <strong>Scaleway</strong> est aujourd'hui l'un des leaders européens dans le domaine du Cloud.
-                L'entreprise fournit un écosystème cloud complet, allant des serveurs dédiés (Bare Metal) aux instances de cloud public, en passant par des solutions d'intelligence artificielle, tout en maintenant un engagement fort pour l'innovation, l'éco-responsabilité et la souveraineté numérique.
-            </p>
-            <img src="images/scaleway.jpg" alt="Logo Scaleway" style="width: 500px; height: 500px; object-fit: contain; border-radius: 10px; flex-shrink: 0;">
+    <!-- ── Navigation ── -->
+    <nav>
+        <a href="index.html">
+            <img alt="logo" src="logo_scaleway.png" width="40px" height="40px">
+        </a>
+        <div class="menu">
+            <a href="index.html">Accueil</a>
+            <a href="page1.html" style="font-weight: bold;">Entreprise</a>
+            <a href="page2.html">Services</a>
+            <a href="page3.html">Infrastructures</a>
         </div>
+    </nav>
 
-        <!-- Paragraphe 2 : image à gauche -->
-        <div style="display: flex; align-items: center; gap: 25px; margin-bottom: 30px; margin-left: auto; width: fit-content;">
-            <img src="https://careers.scaleway.com/images/team.jpg" alt="Équipe Scaleway" style="width: 150px; height: 150px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
-            <p id="p1" style="margin: 0; flex: 1;">
-                <strong>Personnel et équipes :</strong> Scaleway rassemble aujourd'hui <strong>plus de 500 collaborateurs</strong> passionnés. Ces équipes sont réparties dans ses différents bureaux, principalement situés à Paris, Lille, Amsterdam, et Varsovie, travaillant au quotidien pour bâtir une alternative technologique indépendante.
-            </p>
-        </div>
+    <!-- ── Hero ── -->
+    <section class="hero">
+        <h1>Scaleway</h1>
+        <p>
+            Fondée en 1999 et filiale du groupe Iliad, <strong>Scaleway</strong> est aujourd'hui
+            l'un des leaders européens du Cloud. L'entreprise fournit un écosystème cloud complet,
+            allant des serveurs dédiés aux instances de cloud public, tout en s'engageant pour
+            l'innovation, l'éco-responsabilité et la souveraineté numérique.
+        </p>
+        <a href="page2.html" class="btn">Découvrir nos services</a>
+    </section>
 
-        <!-- Paragraphe 3 : image à droite -->
-        <div style="display: flex; align-items: center; gap: 25px;">
-            <p id="p1" style="margin: 0; flex: 1;">
-                <strong>Évolution et croissance :</strong> Poussée par une très forte demande pour les infrastructures souveraines, l'entreprise affiche une croissance soutenue de son activité année après année. Scaleway a su séduire des milliers d'entreprises, affichant un chiffre d'affaires <strong>dépassant largement les 130 millions d'euros</strong> annuels ces dernières années. Cette évolution commerciale robuste confirme sa position d'acteur incontournable au cœur de la tech européenne.
+    <hr class="divider">
+
+    <!-- ── Section 1 : image à gauche ── -->
+    <section class="content-section">
+        <img src="scaleway.jpg" alt="Logo Scaleway" class="img-card">
+        <div class="text-block">
+            <h2>Le pionnier européen du cloud</h2>
+            <p>
+                Fondée en 1999 et filiale du groupe Iliad, <strong>Scaleway</strong> est aujourd'hui
+                l'un des leaders européens dans le domaine du Cloud. L'entreprise fournit un
+                écosystème cloud complet, allant des serveurs dédiés (Bare Metal) aux instances
+                de cloud public, en passant par des solutions d'intelligence artificielle.
             </p>
-            <img src="https://www.scaleway.com/blog/content/images/2024/04/Scaleway-DC5-Datacenter-3-1.jpg" alt="Datacenter Scaleway" style="width: 150px; height: 150px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+            <p>
+                Son engagement fort pour l'innovation, l'éco-responsabilité et la souveraineté
+                numérique en fait un acteur incontournable de la tech européenne.
+            </p>
+            <a href="page2.html" class="btn" style="align-self: flex-start;">En savoir plus</a>
         </div>
-    </div>
-    
-    <footer> Auteur : Thomas Gobert </footer>  
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── Section 2 : image à droite ── -->
+    <section class="content-section reverse">
+        <img src="équipe_scaleway.jpg" alt="Équipe Scaleway" class="img-card">
+        <div class="text-block">
+            <h2>Personnel &amp; équipes</h2>
+            <p>
+                Scaleway rassemble aujourd'hui <strong>plus de 500 collaborateurs</strong> passionnés.
+                Ces équipes sont réparties dans ses différents bureaux, principalement situés à
+                Paris, Lille, Amsterdam, et Varsovie.
+            </p>
+            <p>
+                Ils travaillent au quotidien pour bâtir une alternative technologique indépendante
+                et souveraine, au service des entreprises européennes.
+            </p>
+            <a href="page1.html" class="btn" style="align-self: flex-start;">Notre équipe</a>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── Section 3 : image à gauche ── -->
+    <section class="content-section">
+        <img src="images_scaleway.webp" alt="Datacenter Scaleway" class="img-card">
+        <div class="text-block">
+            <h2>Évolution &amp; croissance</h2>
+            <p>
+                Poussée par une forte demande pour les infrastructures souveraines, l'entreprise
+                affiche une croissance soutenue année après année. Scaleway a su séduire des
+                milliers d'entreprises.
+            </p>
+            <p>
+                Son chiffre d'affaires dépasse largement les <strong>130 millions d'euros</strong>
+                annuels, confirmant sa position d'acteur incontournable au cœur de la tech européenne.
+            </p>
+            <a href="page3.html" class="btn" style="align-self: flex-start;">Nos infrastructures</a>
+        </div>
+    </section>
+
+    <!-- ── Footer 3 colonnes ── -->
+    <footer>
+        <div class="footer-col">
+            <h3>Scaleway</h3>
+            <a href="index.html">Accueil</a>
+            <a href="page1.html">Entreprise</a>
+            <a href="page2.html">Services</a>
+        </div>
+        <div class="footer-col">
+            <h3>Ressources</h3>
+            <a href="page3.html">Infrastructures</a>
+            <a href="#">Documentation</a>
+            <a href="#">Blog</a>
+        </div>
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>Auteur : Thomas Gobert</p>
+            <a href="#">contact@scaleway.com</a>
+            <a href="#">Mentions légales</a>
+        </div>
+    </footer>
+
 </body>
 </html>
