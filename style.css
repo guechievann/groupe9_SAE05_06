@@ -96,6 +96,7 @@ body {
 
 .page-services .hero .lede {
     margin-inline: auto;
+    text-align: center;
 }
 
 .page-services .hero .cta-row {
@@ -119,9 +120,19 @@ body {
     gap: 32px;
 }
 
+.page-services #serverless .container {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    align-items: start;
+}
+
 .page-services #stockage .section-head,
 .page-services #serverless .section-head {
     margin: 0;
+}
+
+.page-services #serverless .section-head {
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .page-services .img2,
@@ -139,12 +150,63 @@ body {
 
 .page-services #serverless .img3 {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 2;
+    align-self: center;
 }
 
-.page-services #serverless .section-head {
+.page-services #serverless .serverless-logo {
     grid-column: 2;
     grid-row: 1;
+    display: block;
+    width: min(100%, 400px);
+    height: auto;
+    justify-self: center;
+    align-self: center;
+}
+
+.page-services .services-technology-table {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.page-services .services-technology-table table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.page-services .services-technology-table caption {
+    padding: 0 0 12px;
+    color: var(--ink);
+    font-family: var(--font-title);
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.page-services .services-technology-table th,
+.page-services .services-technology-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+}
+
+.page-services .services-technology-table th[scope="row"] {
+    min-width: 145px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.page-services .services-technology-table .material-symbols-outlined {
+    margin-right: 4px;
+    color: var(--focus);
+    font-size: 18px;
+    vertical-align: middle;
 }
 
 .page-services #securite .container {
@@ -160,6 +222,67 @@ body {
     text-align: center;
 }
 
+.page-services .services-benefits {
+    max-width: 900px;
+}
+
+.page-services .services-benefits__intro {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+}
+
+.page-services .services-benefits__intro p {
+    max-width: none;
+    margin: 0;
+    color: var(--ink-soft);
+}
+
+.page-services .services-benefits__list {
+    display: grid;
+    gap: 16px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-services .services-benefits__item {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    align-items: start;
+    gap: 16px;
+}
+
+.page-services .services-benefits__icon {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--violet-soft);
+    color: var(--focus);
+}
+
+.page-services .services-benefits__icon.material-symbols-outlined {
+    font-size: 22px;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.page-services .services-benefits__item h3 {
+    margin: 0 0 4px;
+    font-family: var(--font-text);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.page-services .services-benefits__item p {
+    max-width: none;
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 @media (max-width: 768px) {
     .page-services #stockage .container,
     .page-services #serverless .container {
@@ -168,7 +291,9 @@ body {
 
     .page-services #stockage .img2,
     .page-services #serverless .img3,
-    .page-services #serverless .section-head {
+    .page-services #serverless .serverless-logo,
+    .page-services #serverless .section-head,
+    .page-services #serverless .services-technology-table {
         grid-column: 1;
         grid-row: auto;
     }
@@ -369,6 +494,10 @@ h3 {
 p {
   margin: 0 0 16px;
   max-width: var(--measure);
+}
+
+.scaleway-name {
+  color: var(--focus);
 }
 
 /* ---------- Liens (seuls éléments soulignés) ---------- */
@@ -601,4 +730,14 @@ a:hover {
 .social-links svg {
   width: 22.4px;
   height: 22.4px;
+}
+
+.footer-copyright {
+  margin-top: 16px;
+  margin-inline: auto;
+  width: 100%;
+  max-width: none;
+  font-size: 15.2px;
+  color: #b9b6d6;
+  text-align: center;
 }
