@@ -43,7 +43,7 @@ body {
     align-items: center;
     gap: 10px;
     font-family: 'ADLaM Display', 'Trebuchet MS', Arial, sans-serif;
-    font-size: 1.4rem;
+    font-size: 22.4px;
     color: #1b1d3a;
     text-decoration: none;
 }
@@ -78,6 +78,102 @@ body {
     background-color: #4c1aa8;
     color: white;
 }
+
+/* ==================== MISE EN PAGE DES IMAGES - SERVICES ==================== */
+
+.page-services .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+}
+
+.page-services #contenu > .hero {
+    padding: 35px;
+}
+.page-services .hero-grid > div:first-child {
+    text-align: center;
+}
+
+.page-services .hero .lede {
+    margin-inline: auto;
+}
+
+.page-services .hero .cta-row {
+    justify-content: center;
+}
+.page-services .img1 {
+    display: block;
+    width: min(100%, 600px);
+    height: auto;
+    margin-inline: auto;
+    padding: 20px;
+    justify-self: center;
+    border-radius: 35px;
+}
+
+.page-services #stockage .container,
+.page-services #serverless .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 32px;
+}
+
+.page-services #stockage .section-head,
+.page-services #serverless .section-head {
+    margin: 0;
+}
+
+.page-services .img2,
+.page-services .img3 {
+    display: block;
+    width: min(100%, 500px);
+    height: auto;
+    justify-self: center;
+}
+
+.page-services #stockage .img2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.page-services #serverless .img3 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.page-services #serverless .section-head {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.page-services #securite .container {
+    text-align: center;
+}
+
+.page-services #securite .section-head {
+    margin-inline: auto;
+}
+
+.page-services #securite p {
+    margin-inline: auto;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .page-services #stockage .container,
+    .page-services #serverless .container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .page-services #stockage .img2,
+    .page-services #serverless .img3,
+    .page-services #serverless .section-head {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
 /* ==================== ACCUEIL ==================== */
 
 .accueil {
@@ -103,7 +199,7 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 48px;
     font-family: 'ADLaM Display', cursive;
     color: #333;
     margin-top: 100px; /* Espace sous la navbar fixe */
@@ -202,7 +298,7 @@ footer {
   --radius-pill: 999px;
   --radius-panel: 24px;
   --radius-box: 8px;
-  --measure: 66ch;
+  --measure: 528px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -232,9 +328,13 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-text);
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1.65;
 }
+
+
+
+
 
 img,
 svg {
@@ -249,25 +349,25 @@ h3 {
   font-family: var(--font-title);
   font-weight: 400;
   line-height: 1.2;
-  margin: 0 0 1rem;
+  margin: 0 0 16px;
   color: var(--ink);
 }
 
 h1 {
-  font-size: clamp(2rem, 4.2vw, 3.1rem);
-  letter-spacing: -0.01em;
+  font-size: clamp(32px, 4.2vw, 49.6px);
+  letter-spacing: -0.5px;
 }
 
 h2 {
-  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  font-size: clamp(24px, 2.8vw, 33.6px);
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 20px;
 }
 
 p {
-  margin: 0 0 1rem;
+  margin: 0 0 16px;
   max-width: var(--measure);
 }
 
@@ -275,7 +375,7 @@ p {
 a {
   color: var(--violet);
   text-decoration: underline;
-  text-underline-offset: 0.18em;
+  text-underline-offset: 3px;
 }
 
 a:hover {
@@ -290,27 +390,27 @@ a:hover {
 
 .skip-link {
   position: absolute;
-  left: 1rem;
-  top: -4rem;
+  left: 16px;
+  top: -64px;
   background: var(--ink);
   color: var(--bg);
-  padding: 0.6rem 1rem;
+  padding: 9.6px 16px;
   border-radius: var(--radius-box);
   z-index: 20;
 }
 
 .skip-link:focus {
-  top: 0.75rem;
+  top: 12px;
 }
 
 /* ---------- Mise en page ---------- */
 .container {
-  width: min(1120px, 100% - 3rem);
+  width: min(1120px, 100% - 48px);
   margin-inline: auto;
 }
 
 .section {
-  padding-block: 4.5rem;
+  padding-block: 72px;
 }
 
 .section--alt {
@@ -331,17 +431,17 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  min-height: 4.25rem;
+  gap: 24px;
+  min-height: 68px;
   flex-wrap: wrap;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 9.6px;
   font-family: var(--font-title);
-  font-size: 1.4rem;
+  font-size: 22.4px;
   color: var(--ink);
   text-decoration: none;
 }
@@ -358,7 +458,7 @@ a:hover {
 
 .main-nav ul {
   display: flex;
-  gap: 0.25rem;
+  gap: 4px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -367,11 +467,11 @@ a:hover {
 
 .main-nav a {
   display: block;
-  padding: 0.55rem 1.05rem;
+  padding: 8.8px 16.8px;
   border-radius: var(--radius-pill);
   color: var(--ink);
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: 16.8px;
 }
 
 .main-nav a:hover {
@@ -393,13 +493,13 @@ a:hover {
 /* ---------- Boutons d'action arrondis ---------- */
 .btn {
   display: inline-block;
-  padding: 0.8rem 1.6rem;
+  padding: 12.8px 25.6px;
   border-radius: var(--radius-pill);
   border: 2px solid var(--violet);
   background: var(--violet);
   color: #fff;
   font-family: inherit;
-  font-size: 1.05rem;
+  font-size: 16.8px;
   text-decoration: none;
   transition: background-color 0.15s, color 0.15s;
 }
@@ -432,10 +532,11 @@ a:hover {
 
 /* ---------- Pied de page (auteurs visibles sur chaque page) ---------- */
 .site-footer {
-  background: var(--ink);
+  background: #4c1aa8;
   color: #eceaf8;
-  padding-block: 3rem 2rem;
-  font-size: 1rem;
+  padding-block: 48px 32px;
+  font-size: 16px;
+
 }
 
 .site-footer a {
@@ -445,18 +546,22 @@ a:hover {
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  gap: 32px;
+  align-items: start;
+
 }
 
 .footer-title {
   font-family: var(--font-title);
-  font-size: 1.1rem;
-  margin: 0 0 0.5rem;
-  color: #fff;
+  font-size: 17.6px;
+  margin: 0 0 8px;
+  color: #cdbff8;
 }
 
 .site-footer p {
-  margin-bottom: 0.4rem;
+  margin-bottom: 6.4px;
+  text-align: center;
+  
 }
 
 .site-footer ul {
@@ -466,10 +571,34 @@ a:hover {
 }
 
 .legal {
-  margin: 2rem 0 0;
-  padding-top: 1.25rem;
-  border-top: 1px solid #3d3f66;
-  font-size: 0.95rem;
+  margin: 32px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--focus);
+  font-size: 15.2px;
   color: #b9b6d6;
   max-width: none;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgb(255 255 255 / 25%);
+}
+
+.social-links a {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  color: var(--focus);
+  text-decoration: none;
+}
+
+.social-links svg {
+  width: 22.4px;
+  height: 22.4px;
 }
