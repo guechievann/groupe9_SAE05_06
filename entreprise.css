@@ -1,14 +1,29 @@
 /* ── Reset & base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-    background-color: rgb(228, 218, 237);
+    background-color: #0d0b1d;
+    color: #e2e8f0;
     font-family: 'Segoe UI', Roboto, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-
+/* ── Navigation ── */
+nav {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 30px;
+    background-color: #14102e;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+    z-index: 1000;
+}
 .menu {
     position: absolute;
     left: 50%;
@@ -16,12 +31,22 @@ body {
     display: flex;
     gap: 30px;
 }
-
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #a78bfa;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
 
 /* ── Hero ── */
 .hero {
     margin-top: 70px; /* hauteur de la nav fixe */
-    background: linear-gradient(135deg, #7b219b 0%, #4a0e6e 100%);
+    background: linear-gradient(135deg, #1c1543 0%, #0d0b1d 100%);
     color: #fff;
     padding: 80px 60px;
     display: flex;
@@ -32,50 +57,53 @@ body {
 .hero h1 {
     font-family: 'ADLaM Display', cursive;
     font-size: 3rem;
-    color: #fff;
+    color: #ffffff;
     margin: 0;
 }
 .hero p {
     max-width: 620px;
     line-height: 1.8;
     font-size: 1.05rem;
-    color: #e8d5f5;
+    color: #a5b4fc;
 }
-/* ── Boutons par défaut (Sections claires) ── */
+
+/* ── Boutons par défaut (Sections sombres) ── */
 .btn {
     display: inline-block;
     padding: 12px 32px;
-    background: #7b219b;
+    background: #7c3aed;
     color: #fff;
     font-weight: 700;
     border-radius: 30px;
     text-decoration: none;
     font-size: 0.95rem;
-    transition: background 0.25s, color 0.25s, transform 0.2s, border-color 0.25s;
-    border: 2px solid #7b219b;
+    transition: background 0.25s, color 0.25s, transform 0.2s, border-color 0.25s, box-shadow 0.25s;
+    border: 2px solid #8b5cf6;
 }
 .btn:hover {
     background: transparent;
-    color: #7b219b;
+    color: #a78bfa;
     transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
 }
 
 /* ── Bouton du hero (Fond sombre) ── */
 .hero .btn {
-    background: #fff;
-    color: #7b219b;
-    border-color: #fff;
+    background: #8b5cf6;
+    color: #fff;
+    border-color: #8b5cf6;
 }
 .hero .btn:hover {
     background: transparent;
-    color: #fff;
+    color: #a78bfa;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
 }
 
 /* ── Séparateur ── */
 .divider {
     border: none;
-    height: 3px;
-    background: linear-gradient(to right, #7b219b, #e8d5f5, #7b219b);
+    height: 1px;
+    background: linear-gradient(to right, transparent, #7c3aed, transparent);
     margin: 0;
 }
 
@@ -85,11 +113,11 @@ body {
     align-items: center;
     gap: 50px;
     padding: 60px 60px;
-    background-color: #f4f3f5;
+    background-color: #14102e;
 }
 .content-section.reverse {
     flex-direction: row-reverse;
-    background-color: #fff;
+    background-color: #181438;
 }
 .content-section .text-block {
     flex: 1;
@@ -100,11 +128,11 @@ body {
 .content-section .text-block h2 {
     font-family: 'ADLaM Display', cursive;
     font-size: 1.8rem;
-    color: #7b219b;
+    color: #c084fc;
 }
 .content-section .text-block p {
     line-height: 1.8;
-    color: #444;
+    color: #cbd5e1;
     font-size: 1rem;
 }
 
@@ -116,22 +144,51 @@ body {
     border-radius: 16px;
     flex-shrink: 0;
     box-shadow:
-        0 6px 20px rgba(123, 33, 155, 0.25),
-        0 2px 6px rgba(0, 0, 0, 0.12);
-    border: 2px solid rgba(123, 33, 155, 0.18);
+        0 6px 20px rgba(124, 58, 237, 0.25),
+        0 2px 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(139, 92, 246, 0.3);
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
     animation: fadeSlideIn 0.7s ease both;
 }
 .img-card:hover {
     transform: scale(1.04) translateY(-4px);
     box-shadow:
-        0 14px 40px rgba(123, 33, 155, 0.40),
-        0 4px 12px rgba(0, 0, 0, 0.18);
-    border-color: rgba(123, 33, 155, 0.55);
+        0 14px 40px rgba(139, 92, 246, 0.45),
+        0 4px 12px rgba(0, 0, 0, 0.3);
+    border-color: rgba(167, 139, 250, 0.6);
 }
 @keyframes fadeSlideIn {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
-
+/* ── Footer 3 colonnes ── */
+footer {
+    background-color: #0a0817;
+    color: #cbd5e1;
+    padding: 40px 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: auto;
+    border-top: 1px solid rgba(139, 92, 246, 0.15);
+}
+footer .footer-col h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #f8fafc;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+footer .footer-col p,
+footer .footer-col a {
+    display: block;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    text-decoration: none;
+    margin-bottom: 8px;
+    line-height: 1.6;
+    transition: color 0.2s;
+}
+footer .footer-col a:hover { color: #c084fc; }
