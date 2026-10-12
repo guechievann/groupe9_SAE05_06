@@ -102,6 +102,30 @@ body {
 .page-services .hero .cta-row {
     justify-content: center;
 }
+
+.page-services .hero .btn {
+    border-color: var(--focus);
+    background: var(--focus);
+    color: #111111;
+}
+
+.page-services .hero .btn:hover {
+    border-color: var(--focus);
+    background: transparent;
+    color: #111111;
+}
+
+.page-services .hero .btn--ghost {
+    border-color: var(--focus);
+    background: rgb(255 255 255 / 75%);
+    color: #111111;
+}
+
+.page-services .hero .btn--ghost:hover {
+    background: var(--focus);
+    color: #111111;
+}
+
 .page-services .img1 {
     display: block;
     width: min(100%, 600px);
@@ -304,8 +328,8 @@ body {
 .accueil {
     width: 100%;
 
-    background-image: url("fond_accueil.png");
-    background-size: 190% auto;
+    background-image: url("images/fond_accueil.png");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -317,6 +341,103 @@ body {
     align-items: center;
 
     margin: 0;
+}
+
+.page-services {
+    background-image: url("images/fond_accueil.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.page-services .hero,
+.page-services #serverless {
+    --ink: #111111;
+    --ink-soft: #2d2d2d;
+    --violet: #111111;
+    --violet-dark: #000000;
+    color: var(--ink);
+}
+
+.page-services .hero .scaleway-name,
+.page-services .hero h1,
+.page-services .hero h2,
+.page-services .hero h3,
+.page-services .hero p,
+.page-services .hero li,
+.page-services .hero td,
+.page-services .hero th,
+.page-services .hero a,
+.page-services #serverless .scaleway-name,
+.page-services #serverless h1,
+.page-services #serverless h2,
+.page-services #serverless h3,
+.page-services #serverless p,
+.page-services #serverless li,
+.page-services #serverless td,
+.page-services #serverless th,
+.page-services #serverless a {
+    color: var(--ink);
+}
+
+.page-services #securite {
+    --ink: #ffffff;
+    --ink-soft: #f0f0f0;
+    --violet: #ffffff;
+    --violet-dark: #eaeaea;
+    color: var(--ink);
+}
+
+.page-services #securite .scaleway-name,
+.page-services #securite h1,
+.page-services #securite h2,
+.page-services #securite h3,
+.page-services #securite p,
+.page-services #securite li,
+.page-services #securite td,
+.page-services #securite th,
+.page-services #securite a {
+    color: var(--ink);
+}
+
+.page-services .hero p .scaleway-name,
+.page-services #stockage p .scaleway-name,
+.page-services #serverless p .scaleway-name,
+.page-services #securite p .scaleway-name {
+    color: var(--focus);
+}
+
+.logo-group {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 64px;
+    padding-right: 64px;
+}
+
+.logo-group img {
+    display: block;
+    width: auto;
+    height: 64px;
+    max-width: 160px;
+    object-fit: contain;
+}
+
+@keyframes logo-scroll {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo-track {
+        animation: none;
+    }
+
+    .logo-group[aria-hidden="true"] {
+        display: none;
+    }
 }
 
 
@@ -402,7 +523,7 @@ footer {
 
 }
 
-/* ===================INFRA ================== */
+
 
 :root {
   --ink: #1b1d3a;
