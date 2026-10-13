@@ -76,4 +76,5 @@ et validées à l'aide du validateur officiel W3C.
 - [Validation W3C - Infrastructures](https://validator.w3.org/nu/?doc=https%3A%2F%2Fguechievann.github.io%2Fgroupe9_SAE05_06%2Finfrastructures.html)
 
 ![Validation W3C Infrastructures](doc/w3c-infrastructures.png)
+.
 
