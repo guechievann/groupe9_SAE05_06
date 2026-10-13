@@ -162,33 +162,3 @@ nav a:hover {
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Footer 3 colonnes ── */
-footer {
-    background-color: #0a0817;
-    color: #cbd5e1;
-    padding: 40px 60px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: auto;
-    border-top: 1px solid rgba(139, 92, 246, 0.15);
-}
-footer .footer-col h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 14px;
-    color: #f8fafc;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-footer .footer-col p,
-footer .footer-col a {
-    display: block;
-    font-size: 0.9rem;
-    color: #94a3b8;
-    text-decoration: none;
-    margin-bottom: 8px;
-    line-height: 1.6;
-    transition: color 0.2s;
-}
-footer .footer-col a:hover { color: #c084fc; }
