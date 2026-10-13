@@ -97,3 +97,30 @@ avec EcoIndex afin d'évaluer leur impact environnemental.
 ### Page Infrastructures
 
 ![EcoIndex - Infrastructures](doc/ecoindex-infrastructures.png)
+
+
+## Choix de conception
+
+### Identité visuelle
+
+Pour la réalisation de notre site, nous nous sommes inspirés de l'identité visuelle de Scaleway ainsi que proton, tout en apportant notre propre touche personnelle.
+
+Nous avons choisi des nuances de violet, de bleu nuit et des couleurs claires afin de créer un contraste entre les différentes sections. Ce choix permet de rester cohérent en rendant le site agréable à consulter.
+
+### Navigation et ergonomie
+
+Nous avons mis une barre de navigation commune aux quatre pages du site : Accueil, Entreprise, Services et Infrastructures.
+
+Cette organisation permet aux utilisateurs de passer facilement d'une rubrique à une autre et de retrouver rapidement les informations recherchées.
+
+### Organisation du contenu
+
+Nous avons choisi de répartir les informations sur quatre pages afin de présenter progressivement l'entreprise Scaleway.
+
+Chaque page a un aspect précis de l'entreprise, ce qui permet d'éviter de surcharger une seule page avec trop d'informations.
+
+### Mise en page
+
+Nous avons utilisé des images, des titres et des sections afin de structurer les informations et de faciliter la lecture.
+
+Nous avons également utiliser une feuille de style CSS commune.
