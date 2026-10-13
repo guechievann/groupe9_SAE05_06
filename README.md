@@ -14,21 +14,6 @@ L'objectif est de faire découvrir cette entreprise à travers une présentation
 <br>
 mais également approfondie de son activité économique, des services qu'elle propose et de ses infrastructures.  
 
-<h2>Validation W3C</h2>
-
-<h3>Test 1</h3>
-<img src="Validation_test1_W3C.png">
-
-<h3>Test 2</h3>
-<img src="Validation_test2_W3C.png">
-
-<h3>Test 3</h3>
-<img src="Validation_test3_W3C.png">
-
-<h3>Test 4</h3>
-<img src="Validation_test4_W3C.png">
-
-
 <h2>Répartition des tâches</h2>
 
 <h3>Auteurs des pages</h3>
