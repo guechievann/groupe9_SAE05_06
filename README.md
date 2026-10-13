@@ -8,6 +8,8 @@
 <h2>Sujet</h2>
 <a href="https://guechievann.github.io/groupe9_SAE05_06/" target="_blank" >Lien vers le site internet</a><br>
 <h2>Présentation du projet</h2>
-le projet consiste à présenter l'entreprise Scaleway sur un plan large et plus précis tel :<br>
-- un point de vue économique <br>
-- les services qu'elle propose
+Ce projet, consiste à présenter l'entreprise Scaleway sur différents aspects.
+<br>
+L'objectif est de faire découvrir cette entreprise à travers une présentation générale, 
+<br>
+mais également approfondie de son activité économique, des services qu'elle propose et de ses infrastructures.  
