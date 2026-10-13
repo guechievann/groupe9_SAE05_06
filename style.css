@@ -862,3 +862,28 @@ a:hover {
   color: #b9b6d6;
   text-align: center;
 }
+#reseaux-sociaux {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  padding: 20px !important;
+  background-color: #0a0817 !important;
+  border-top: 1px solid rgba(139, 92, 246, 0.15) !important;
+  order: 999 !important;
+  position: relative !important;
+}
+
+#reseaux-sociaux a {
+  color: var(--focus) !important;
+  text-decoration: none !important;
+}
+
+#reseaux-sociaux a:hover {
+  color: var(--focus) !important;
+  opacity: 0.8 !important;
+}
+
+#reseaux-sociaux svg {
+  width: 28px !important;
+  height: 28px !important;
+}
