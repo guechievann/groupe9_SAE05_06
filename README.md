@@ -77,4 +77,23 @@ et validées à l'aide du validateur officiel W3C.
 
 ![Validation W3C Infrastructures](doc/w3c-infrastructures.png)
 .
+## Tests EcoIndex
 
+Les quatre pages du site Scaleway ont été analysées
+avec EcoIndex afin d'évaluer leur impact environnemental.
+
+### Page d'accueil
+
+![EcoIndex - Accueil](doc/ecoindex-accueil.png)
+
+### Page Entreprise
+
+![EcoIndex - Entreprise](doc/ecoindex-entreprise.png)
+
+### Page Services
+
+![EcoIndex - Services](doc/ecoindex-services.png)
+
+### Page Infrastructures
+
+![EcoIndex - Infrastructures](doc/ecoindex-infrastructures.png)
