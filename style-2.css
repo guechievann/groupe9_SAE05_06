@@ -1,0 +1,943 @@
+/* ==========================================================
+   Swaycloud : feuille de style UNIQUE (4 pages)
+   Référence graphique : page Accueil
+   Sommaire :
+     1. Variables et base
+     2. Menu
+     3. Boutons
+     4. Hero (en-tête de page)
+     5. Sections génériques
+     6. Page Accueil
+     7. Page Entreprise
+     8. Page Services
+     9. Page Infrastructures
+    10. Footer
+    11. Responsive
+    12. Accessibilité
+   ========================================================== */
+
+
+/* ==================== 1. VARIABLES ET BASE ==================== */
+
+:root {
+    --violet-fonce: #201332;
+    --violet: #6932B8;
+    --violet-clair: #9B57F5;
+    --lavande: #EAE0F2;
+    --peche: #FFB36E;
+    --peche-clair: #FFD1A4;
+    --creme: #FCFBF6;
+    --texte-doux: #4B405D;
+    --bordure: #D9CBEA;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: var(--violet-fonce);
+    background-color: var(--creme);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+a:focus-visible,
+.bouton:focus-visible {
+    outline: 3px solid var(--peche);
+    outline-offset: 3px;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.sur-titre {
+    color: var(--violet-clair);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* ==================== 2. MENU ==================== */
+
+.navigation {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 14px 8%;
+    background-color: var(--violet-fonce);
+}
+
+.marque {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.marque img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.menu a {
+    color: #F4ECFF;
+    text-decoration: none;
+}
+
+.menu a:hover,
+.menu .actif {
+    color: var(--peche);
+}
+
+
+/* ==================== 3. BOUTONS ==================== */
+
+.boutons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 28px;
+}
+
+.bouton {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background-color: var(--peche);
+    border: 2px solid var(--peche);
+    color: var(--violet-fonce);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.bouton:hover {
+    background-color: var(--peche-clair);
+    border-color: var(--peche-clair);
+}
+
+.bouton-secondaire {
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+.bouton-secondaire:hover {
+    background-color: var(--peche);
+    border-color: var(--peche);
+}
+
+
+/* ==================== 4. HERO (en-tête de chaque page) ==================== */
+
+.hero {
+    padding: 80px 8%;
+    background-image: url("images/fond_accueil.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin: 15px 0 22px;
+}
+
+.introduction {
+    max-width: 580px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--texte-doux);
+}
+
+/* Hero avec texte + image côte à côte (Services, Infrastructures) */
+.hero-grille {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-grille img {
+    display: block;
+    width: 100%;
+    border-radius: 24px;
+}
+
+.legende {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: var(--texte-doux);
+}
+
+/* Hero de la page d'accueil */
+.hero-accueil {
+    display: flex;
+    align-items: center;
+    min-height: 530px;
+}
+
+.hero-accueil .hero-contenu {
+    width: 60%;
+}
+
+
+/* ==================== 5. SECTIONS GÉNÉRIQUES ==================== */
+
+.section {
+    padding: 70px 8%;
+    background-color: var(--creme);
+}
+
+.section--alt {
+    background-color: var(--lavande);
+}
+
+.section h2 {
+    margin: 0 0 20px;
+    font-size: 34px;
+    color: var(--violet);
+}
+
+.section h3 {
+    margin: 24px 0 10px;
+    font-size: 20px;
+}
+
+.section p,
+.section li {
+    line-height: 1.8;
+    color: var(--texte-doux);
+}
+
+.section p {
+    max-width: 760px;
+}
+
+.section ul {
+    padding-left: 22px;
+}
+
+.section a:not(.bouton) {
+    color: var(--violet);
+}
+
+.section a:not(.bouton):hover {
+    color: var(--violet-fonce);
+}
+
+.section-head p {
+    font-size: 18px;
+}
+
+.nom-marque {
+    color: var(--violet);
+    font-weight: 600;
+}
+
+/* Grandes images de contenu (tableaux, schémas, graphiques) */
+.image-contenu {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    margin: 25px 0;
+    border: 1px solid var(--bordure);
+    border-radius: 14px;
+    background-color: white;
+}
+
+
+/* ==================== 6. PAGE ACCUEIL ==================== */
+
+/* ----- Section logos ----- */
+
+.logos {
+    padding: 75px 8% 45px;
+    background-image: url("images/fond_texture.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: var(--violet-fonce);
+}
+
+.bloc-logos {
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 260px;
+    padding: 35px 30px;
+    border-radius: 22px;
+    background-color: var(--lavande);
+}
+
+.contenu-logos {
+    width: 75%;
+    min-width: 0;
+}
+
+.contenu-logos .sur-titre {
+    margin-top: 0;
+    color: var(--violet);
+}
+
+.contenu-logos h2 {
+    margin: 12px 0 30px;
+    font-size: 25px;
+    color: var(--violet-fonce);
+}
+
+.ligne-logos {
+    width: 100%;
+    overflow: hidden;
+}
+
+.defilement {
+    display: flex;
+    width: max-content;
+    animation: defiler 30s linear infinite;
+}
+
+.groupe-logos {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding-right: 45px;
+}
+
+.groupe-logos img {
+    width: 125px;
+    height: 75px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+@keyframes defiler {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.illustration-logos {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.illustration-logos img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 14px;
+}
+
+/* ----- Trois piliers ----- */
+
+.piliers {
+    padding: 45px 8% 100px;
+    color: white;
+    background-image: url("images/fond_texture.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--violet-fonce);
+}
+
+.piliers > .sur-titre {
+    text-align: center;
+    color: var(--peche);
+}
+
+.piliers h2 {
+    text-align: center;
+    font-size: 40px;
+    margin: 12px 0 45px;
+}
+
+.cartes {
+    display: flex;
+    gap: 22px;
+}
+
+.carte {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+    background-color: rgba(32, 19, 50, 0.65);
+    border: 1px solid #7654A3;
+    border-radius: 16px;
+}
+
+.icone-carte {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    background-color: #5431A5;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.carte h3 {
+    color: var(--peche);
+    font-size: 24px;
+    margin: 0 0 16px;
+}
+
+.carte p {
+    line-height: 1.7;
+    color: #E8DEF4;
+    min-height: 120px;
+}
+
+.carte a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--peche);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.carte a:hover {
+    text-decoration: underline;
+}
+
+/* ----- Chiffres ----- */
+
+.chiffres {
+    padding: 85px 8% 95px;
+    background-image: url("images/fond_accueil.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.chiffres > .sur-titre {
+    text-align: center;
+}
+
+.chiffres h2 {
+    text-align: center;
+    font-size: 38px;
+    margin: 12px 0 45px;
+}
+
+.statistiques {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.stat {
+    padding: 28px 15px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 16px;
+}
+
+.stat h3 {
+    margin: 0 0 10px;
+    font-size: 43px;
+    color: #6A25C2;
+}
+
+.stat p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #514467;
+}
+
+
+/* ==================== 7. PAGE ENTREPRISE ==================== */
+
+.deux-colonnes {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.deux-colonnes--inverse {
+    flex-direction: row-reverse;
+}
+
+.image-carte {
+    width: 380px;
+    height: 280px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid var(--bordure);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(105, 50, 184, 0.18);
+}
+
+.bloc-texte {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bloc-texte h2 {
+    margin-bottom: 10px;
+}
+
+.bloc-texte p {
+    margin: 0 0 10px;
+}
+
+.bloc-texte .bouton {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+
+/* ==================== 8. PAGE SERVICES ==================== */
+
+#stockage .container,
+#serverless .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 32px;
+}
+
+#serverless .container {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    align-items: start;
+}
+
+#stockage .section-head,
+#serverless .section-head {
+    margin: 0;
+}
+
+#serverless .section-head {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.img-service {
+    display: block;
+    width: min(100%, 500px);
+    height: auto;
+    justify-self: center;
+}
+
+#stockage .img-service {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#serverless .img-conteneurs {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+}
+
+#serverless .img-serverless {
+    grid-column: 2;
+    grid-row: 1;
+    width: min(100%, 400px);
+    align-self: center;
+}
+
+.tableau-technologies {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tableau-technologies table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.tableau-technologies caption {
+    padding: 0 0 12px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    color: var(--violet-fonce);
+}
+
+.tableau-technologies th,
+.tableau-technologies td {
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--bordure);
+    vertical-align: top;
+    color: var(--texte-doux);
+}
+
+.tableau-technologies th[scope="row"] {
+    min-width: 145px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--violet-fonce);
+}
+
+.tableau-technologies .material-symbols-outlined {
+    margin-right: 4px;
+    color: var(--violet);
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+#securite .container {
+    text-align: center;
+}
+
+#securite p {
+    margin-inline: auto;
+}
+
+.avantages {
+    max-width: 900px;
+}
+
+.avantages-intro {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--bordure);
+}
+
+.avantages-intro p {
+    max-width: none;
+    margin: 0;
+}
+
+.avantages-liste {
+    display: grid;
+    gap: 16px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.avantage {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    align-items: start;
+    gap: 16px;
+}
+
+.avantage-icone {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border-radius: 12px;
+    background-color: var(--lavande);
+    color: var(--violet);
+    font-size: 22px;
+}
+
+.avantage h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.avantage p {
+    max-width: none;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ==================== 9. PAGE INFRASTRUCTURES ==================== */
+
+/* Les tableaux, schémas et graphiques utilisent .image-contenu (voir §5) */
+
+.liste-sources {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 25px;
+}
+
+
+/* ==================== 10. FOOTER ==================== */
+
+.site-footer {
+    padding: 55px 8% 30px;
+    background-color: var(--violet-fonce);
+    color: #ECE5F7;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.footer-title {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 0 12px;
+}
+
+.site-footer p,
+.site-footer li {
+    line-height: 1.7;
+}
+
+.site-footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 35px;
+    padding-top: 22px;
+    border-top: 1px solid #594773;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: #EAE0F2;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--peche);
+}
+
+.social-links svg {
+    width: 22px;
+    height: 22px;
+}
+
+.footer-copyright {
+    margin-top: 25px;
+    text-align: center;
+    color: #B9B0CC;
+    font-size: 14px;
+}
+
+
+/* ==================== 11. RESPONSIVE ==================== */
+
+@media (max-width: 900px) {
+
+    .hero-accueil .hero-contenu {
+        width: 100%;
+    }
+
+    .hero-grille {
+        grid-template-columns: 1fr;
+    }
+
+    .bloc-logos {
+        padding: 30px;
+    }
+
+    .contenu-logos {
+        width: 70%;
+    }
+
+    .illustration-logos {
+        width: 30%;
+    }
+
+    .cartes {
+        flex-direction: column;
+    }
+
+    .carte p {
+        min-height: 0;
+    }
+
+    .statistiques {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .deux-colonnes,
+    .deux-colonnes--inverse {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .image-carte {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #stockage .container,
+    #serverless .container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #stockage .img-service,
+    #serverless .img-conteneurs,
+    #serverless .img-serverless,
+    #serverless .section-head,
+    #serverless .tableau-technologies {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .navigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px 5%;
+    }
+
+    .menu {
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 6%;
+    }
+
+    .hero-accueil {
+        min-height: 0;
+    }
+
+    .hero h1 {
+        font-size: 33px;
+    }
+
+    .introduction {
+        font-size: 16px;
+    }
+
+    .boutons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section {
+        padding: 50px 6%;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .logos {
+        padding: 45px 6% 30px;
+    }
+
+    .bloc-logos {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .contenu-logos {
+        width: 100%;
+    }
+
+    .contenu-logos h2 {
+        font-size: 21px;
+    }
+
+    .illustration-logos {
+        width: 100%;
+    }
+
+    .illustration-logos img {
+        width: 170px;
+    }
+
+    .groupe-logos {
+        gap: 30px;
+        padding-right: 30px;
+    }
+
+    .groupe-logos img {
+        width: 105px;
+        height: 65px;
+    }
+
+    .piliers,
+    .chiffres {
+        padding: 65px 6%;
+    }
+
+    .piliers h2,
+    .chiffres h2 {
+        font-size: 30px;
+    }
+
+    .statistiques {
+        gap: 10px;
+    }
+
+    .stat h3 {
+        font-size: 33px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==================== 12. ACCESSIBILITÉ ==================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .defilement {
+        animation: none;
+    }
+}
+
+/* Figure du hero (carte des régions) */
+.hero-grille figure {
+    margin: 0;
+}
