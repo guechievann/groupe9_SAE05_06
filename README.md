@@ -35,35 +35,45 @@ mais également approfondie de son activité économique, des services qu'elle p
     <li>Rédaction du README : Thomas Gobert, Eline Iciakhene</li>
 </ul>
 
+
 ## Tests de validation W3C
 
-Les quatre pages HTML du site Scaleway ont été
-testées et validées avec le validateur W3C.
+Les quatre pages HTML du site Scaleway ont été testées
+et validées à l'aide du validateur officiel W3C.
 
 ### Page d'accueil
+
 - Fichier : `index.html`
 - Auteur : Eline Iciakhene
 - Test réalisé par : Eline Iciakhene
+- [Validation W3C - Accueil](https://validator.w3.org/nu/?doc=https%3A%2F%2Fguechievann.github.io%2Fgroupe9_SAE05_06%2Findex.html)
 
 ![Validation W3C Accueil](doc/w3c-accueil.png)
 
 ### Page Entreprise
+
 - Fichier : `entreprise.html`
 - Auteur : Thomas Gobert
 - Test réalisé par : Eline Iciakhene
+- [Validation W3C - Entreprise](https://validator.w3.org/nu/?doc=https%3A%2F%2Fguechievann.github.io%2Fgroupe9_SAE05_06%2Fentreprise.html)
 
 ![Validation W3C Entreprise](doc/w3c-entreprise.png)
 
 ### Page Services
+
 - Fichier : `services.html`
 - Auteur : Evann Guechi
 - Test réalisé par : Eline Iciakhene
+- [Validation W3C - Services](https://validator.w3.org/nu/?doc=https%3A%2F%2Fguechievann.github.io%2Fgroupe9_SAE05_06%2Fservices.html)
 
 ![Validation W3C Services](doc/w3c-services.png)
 
 ### Page Infrastructures
+
 - Fichier : `infrastructures.html`
 - Auteur : Mathéo Guipet
 - Test réalisé par : Eline Iciakhene
+- [Validation W3C - Infrastructures](https://validator.w3.org/nu/?doc=https%3A%2F%2Fguechievann.github.io%2Fgroupe9_SAE05_06%2Finfrastructures.html)
 
 ![Validation W3C Infrastructures](doc/w3c-infrastructures.png)
+
