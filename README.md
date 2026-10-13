@@ -124,3 +124,14 @@ Chaque page a un aspect précis de l'entreprise, ce qui permet d'éviter de surc
 Nous avons utilisé des images, des titres et des sections afin de structurer les informations et de faciliter la lecture.
 
 Nous avons également utiliser une feuille de style CSS commune.
+
+
+## Contributions GitHub
+
+Le projet a été réalisé en groupe, avec une
+répartition des tâches entre les quatre membres.
+
+La capture suivante présente les contributions
+enregistrées sur notre dépôt GitHub.
+
+![Contributions GitHub](doc/contributeurs.png)
