@@ -34,3 +34,36 @@ mais également approfondie de son activité économique, des services qu'elle p
     <li>Tests et validation W3C : Eline iciakhene </li>
     <li>Rédaction du README : Thomas Gobert, Eline Iciakhene</li>
 </ul>
+
+## Tests de validation W3C
+
+Les quatre pages HTML du site Scaleway ont été
+testées et validées avec le validateur W3C.
+
+### Page d'accueil
+- Fichier : `index.html`
+- Auteur : Eline Iciakhene
+- Test réalisé par : Eline Iciakhene
+
+![Validation W3C Accueil](doc/w3c-accueil.png)
+
+### Page Entreprise
+- Fichier : `entreprise.html`
+- Auteur : Thomas Gobert
+- Test réalisé par : Eline Iciakhene
+
+![Validation W3C Entreprise](doc/w3c-entreprise.png)
+
+### Page Services
+- Fichier : `services.html`
+- Auteur : Evann Guechi
+- Test réalisé par : Eline Iciakhene
+
+![Validation W3C Services](doc/w3c-services.png)
+
+### Page Infrastructures
+- Fichier : `infrastructures.html`
+- Auteur : Mathéo Guipet
+- Test réalisé par : Eline Iciakhene
+
+![Validation W3C Infrastructures](doc/w3c-infrastructures.png)
