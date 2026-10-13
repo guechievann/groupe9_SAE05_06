@@ -27,3 +27,25 @@ mais également approfondie de son activité économique, des services qu'elle p
 
 <h3>Test 4</h3>
 <img src="Validation_test4_W3C.png">
+
+
+<h2>Répartition des tâches</h2>
+
+<h3>Auteurs des pages</h3>
+
+<ul>
+    <li>Accueil : Eline Iciakhene </li>
+    <li>Entreprise : Thomas Gobert</li>
+    <li>Services : Evann Guechi</li>
+    <li>Infrastructures : Mathéo Guipet </li>
+</ul>
+
+<h3>Autres tâches réalisées</h3>
+
+<ul>
+    <li>Recherches documentaires : Tout le monde </li>
+    <li>Charte graphique et CSS : Mathéo Guipet</li>
+    <li>Recherche des images : Tout le monde </li>
+    <li>Tests et validation W3C : Eline iciakhene </li>
+    <li>Rédaction du README : Thomas Gobert, Eline Iciakhene</li>
+</ul>
